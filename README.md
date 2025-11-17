@@ -85,3 +85,90 @@ print("="*80)
 print(df_products.to_string(index=False))
 print("\n" + "="*80)
 print("\nCSV file saved: dropshipping_products_analysis_2025.csv")
+
+# Create comprehensive automation and platform comparison
+import pandas as pd
+
+# Free dropshipping platforms and automation tools
+platforms_data = {
+    'Platform/Tool': [
+        'Shopify Collective',
+        'Facebook/TikTok Shops',
+        'Amazon Seller',
+        'eBay',
+        'Etsy',
+        'WooCommerce',
+        'Wix eCommerce',
+        'EPROLO',
+        'AliDropship Plugin',
+        'DSers (AliExpress)'
+    ],
+    'Startup Cost': [
+        'Free (for eligible)',
+        '$0',
+        '$0 (individual plan)',
+        '$0 (250 free listings)',
+        '$0.20/listing',
+        'Free (hosting required)',
+        'Free plan available',
+        'Free',
+        '$89 one-time',
+        'Free (up to 3,000 products)'
+    ],
+    'Monthly Fee': [
+        '$0',
+        '$0',
+        'Variable by sales',
+        'Fees on sales',
+        '6.5% transaction fee',
+        '$0 (plugin only)',
+        '$0-29/month',
+        '$0',
+        '$0 after purchase',
+        '$0-19.90'
+    ],
+    'Automation Level': [
+        'High',
+        'Medium',
+        'Medium',
+        'Medium',
+        'Low',
+        'High (with plugins)',
+        'Medium',
+        'High',
+        'High',
+        'Very High'
+    ],
+    'Best For': [
+        'Shopify users',
+        'Social media marketing',
+        'Large marketplace reach',
+        'General products',
+        'Handmade/vintage',
+        'WordPress users',
+        'Beginners',
+        'Zero budget start',
+        'Full automation',
+        'AliExpress sourcing'
+    ],
+    'Payment Processing': [
+        'Shopify Payments',
+        'Built-in',
+        'Amazon Pay',
+        'PayPal/Cards',
+        'Etsy Payments',
+        'WooCommerce/Stripe',
+        'Wix Payments',
+        'External required',
+        'External required',
+        'External required'
+    ]
+}
+
+df_platforms = pd.DataFrame(platforms_data)
+df_platforms.to_csv('dropshipping_platforms_comparison_2025.csv', index=False)
+print("\nFree and Low-Cost Dropshipping Platforms for 2025")
+print("="*90)
+print(df_platforms.to_string(index=False))
+print("\n" + "="*90)
+print("\nCSV file saved: dropshipping_platforms_comparison_2025.csv")
