@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendFlow Mart - Your Gateway to Global Trends</title>
+    <meta name="description" content="Discover trending products worldwide. Health & Wellness, Pet Supplies, Smart Home, Eco-Friendly. Free shipping, 30-day returns.">
+    <style>
+:root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --color-accent: #FF6B6B;
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-card-border);
+  padding: var(--space-16) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--space-32);
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--duration-fast);
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: var(--space-8) var(--space-12);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  background: var(--color-background);
+}
+
+.nav-icons {
+  display: flex;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  color: var(--color-text);
+  padding: var(--space-8);
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-teal-700) 100%);
+  color: white;
+  padding: var(--space-64) var(--space-24);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-16);
+  font-weight: var(--font-weight-bold);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-32);
+  opacity: 0.95;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-12) var(--space-32);
+  background: white;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-radius: var(--radius-base);
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-48) var(--space-24);
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-32);
+  text-align: center;
+  color: var(--color-text);
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: var(--space-64);
+}
+
+.category-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.category-icon {
+  font-size: 48px;
+  margin-bottom: var(--space-16);
+}
+
+.category-card h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.category-card p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-16);
+}
+
+.product-count {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+/* Products Grid */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-24);
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+.filters {
+  display: flex;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  padding: var(--space-8) var(--space-12);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background: var(--color-surface);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-24);
+}
+
+.product-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  background: var(--color-bg-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  padding: var(--space-16);
+}
+
+.product-info {
+  padding: var(--space-16);
+}
+
+.product-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-sm);
+}
+
+.stars {
+  color: #FFB800;
+}
+
+.review-count {
+  color: var(--color-text-secondary);
+}
+
+.product-pricing {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.product-price {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: var(--space-8);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-base);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background var(--duration-fast);
+}
+
+.add-to-cart-btn:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Benefits Section */
+.benefits {
+  background: var(--color-surface);
+  padding: var(--space-48) var(--space-24);
+  margin: var(--space-64) 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-32);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  text-align: center;
+}
+
+.benefit-icon {
+  font-size: 48px;
+  margin-bottom: var(--space-16);
+}
+
+.benefit-item h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.benefit-item p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Product Detail */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-48);
+  margin-bottom: var(--space-64);
+}
+
+.product-detail-image {
+  width: 100%;
+  height: 500px;
+  background: var(--color-bg-1);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--space-24);
+}
+
+.product-detail-info h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-16);
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-24);
+}
+
+.detail-pricing {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+.detail-price {
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.detail-original-price {
+  font-size: var(--font-size-xl);
+  text-decoration: line-through;
+  color: var(--color-text-secondary);
+}
+
+.savings-badge {
+  background: var(--color-accent);
+  color: white;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.product-description {
+  margin-bottom: var(--space-24);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.product-meta {
+  margin-bottom: var(--space-24);
+  padding: var(--space-16);
+  background: var(--color-background);
+  border-radius: var(--radius-base);
+}
+
+.product-meta-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.product-meta-item:last-child {
+  border-bottom: none;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+.quantity-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.quantity-value {
+  min-width: 40px;
+  text-align: center;
+  font-weight: var(--font-weight-semibold);
+}
+
+.detail-actions {
+  display: flex;
+  gap: var(--space-12);
+  margin-bottom: var(--space-32);
+}
+
+.detail-actions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* Cart */
+.cart-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-32);
+}
+
+.cart-items {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+}
+
+.cart-item {
+  display: flex;
+  gap: var(--space-16);
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  background: var(--color-bg-1);
+  border-radius: var(--radius-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  flex-shrink: 0;
+  padding: var(--space-8);
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+}
+
+.cart-item-price {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-12);
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  text-decoration: underline;
+}
+
+.cart-summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.summary-row:last-of-type {
+  border-bottom: none;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--space-8);
+}
+
+.empty-cart {
+  text-align: center;
+  padding: var(--space-64) var(--space-24);
+}
+
+.empty-cart-icon {
+  font-size: 64px;
+  margin-bottom: var(--space-16);
+}
+
+/* Checkout */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-32);
+}
+
+.checkout-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-32);
+  position: relative;
+}
+
+.progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-card-border);
+  z-index: 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.step.active .step-number {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.step.completed .step-number {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.step-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.step.active .step-label {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.form-section {
+  margin-bottom: var(--space-32);
+}
+
+.form-section h3 {
+  margin-bottom: var(--space-16);
+}
+
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-12);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-12);
+}
+
+.payment-method {
+  padding: var(--space-16);
+  border: 2px solid var(--color-card-border);
+  border-radius: var(--radius-base);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.payment-method:hover {
+  border-color: var(--color-primary);
+}
+
+.payment-method.selected {
+  border-color: var(--color-primary);
+  background: var(--color-bg-1);
+}
+
+.checkout-actions {
+  display: flex;
+  gap: var(--space-12);
+  justify-content: space-between;
+}
+
+/* Footer */
+.footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-card-border);
+  padding: var(--space-48) var(--space-24) var(--space-24);
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-32);
+  margin-bottom: var(--space-32);
+}
+
+.footer-section h3 {
+  margin-bottom: var(--space-16);
+  font-size: var(--font-size-lg);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-8);
+}
+
+.footer-links a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--space-12);
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: var(--font-size-lg);
+  transition: all var(--duration-fast);
+}
+
+.social-icon:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: var(--space-8) var(--space-12);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--color-card-border);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* About & Contact Pages */
+.page-header {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-48) var(--space-24);
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-16);
+}
+
+.content-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-48) var(--space-24);
+}
+
+.content-section h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-16);
+  color: var(--color-text);
+}
+
+.content-section p {
+  margin-bottom: var(--space-16);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.contact-info {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  margin-bottom: var(--space-32);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
+.contact-icon {
+  font-size: var(--font-size-xl);
+}
+
+.faq-item {
+  margin-bottom: var(--space-24);
+  padding: var(--space-16);
+  background: var(--color-surface);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-card-border);
+}
+
+.faq-question {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.faq-answer {
+  color: var(--color-text-secondary);
+}
+
+/* Order Confirmation */
+.confirmation {
+  text-align: center;
+  padding: var(--space-64) var(--space-24);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  font-size: 64px;
+  color: var(--color-primary);
+  margin-bottom: var(--space-24);
+}
+
+.confirmation h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-16);
+}
+
+.order-number {
+  background: var(--color-bg-1);
+  padding: var(--space-16);
+  border-radius: var(--radius-base);
+  margin: var(--space-24) 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .search-bar {
+    display: none;
+  }
+  
+  .hero h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  
+  .product-detail,
+  .cart-container,
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .cart-summary {
+    position: static;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hide views */
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: var(--space-24);
+  right: var(--space-24);
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-md);
+  z-index: 2000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.toast.error {
+  background: var(--color-accent);
+}
+
+.toast.success {
+  background: var(--color-primary);
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="app.showView('home')">
+                <span class="logo-icon">🌊</span>
+                <span>TrendFlow Mart</span>
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="app.showView('home')">Home</a></li>
+                <li><a href="#" onclick="app.showView('shop')">Shop</a></li>
+                <li><a href="#" onclick="app.showView('about')">About</a></li>
+                <li><a href="#" onclick="app.showView('contact')">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" onclick="app.showView('cart')">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="icon-btn">👤</button>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Home View -->
+    <div id="homeView" class="view active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover What's Trending Worldwide</h1>
+                <p class="hero-subtitle">Free shipping on orders over $50 | 30-day returns | Fast worldwide delivery</p>
+                <button class="btn" onclick="app.showView('shop')">Shop Now</button>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid" id="categoriesGrid"></div>
+        </div>
+
+        <!-- Trending Products -->
+        <div class="container">
+            <h2 class="section-title">Trending Products</h2>
+            <div class="products-grid" id="homeProductsGrid"></div>
+        </div>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Free Worldwide Shipping</h3>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✅</div>
+                    <h3>30-Day Money-Back</h3>
+                    <p>100% satisfaction guarantee</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💬</div>
+                    <h3>24/7 Customer Support</h3>
+                    <p>Always here to help</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Secure Payment</h3>
+                    <p>Your data is protected</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Shop View -->
+    <div id="shopView" class="view">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title" style="margin-bottom: 0;">All Products</h2>
+                <div class="filters">
+                    <select class="filter-select" id="categoryFilter" onchange="app.filterProducts()">
+                        <option value="all">All Categories</option>
+                    </select>
+                    <select class="filter-select" id="sortFilter" onchange="app.filterProducts()">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="shopProductsGrid"></div>
+        </div>
+    </div>
+
+    <!-- Product Detail View -->
+    <div id="productView" class="view">
+        <div class="container">
+            <div class="product-detail" id="productDetail"></div>
+        </div>
+    </div>
+
+    <!-- Cart View -->
+    <div id="cartView" class="view">
+        <div class="container">
+            <h2 class="section-title">Shopping Cart</h2>
+            <div class="cart-container" id="cartContainer"></div>
+        </div>
+    </div>
+
+    <!-- Checkout View -->
+    <div id="checkoutView" class="view">
+        <div class="container">
+            <h2 class="section-title">Checkout</h2>
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Shipping</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Payment</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Review</div>
+                        </div>
+                    </div>
+
+                    <div id="checkoutStep1">
+                        <div class="form-section">
+                            <h3>Shipping Information</h3>
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Address *</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>City *</label>
+                                    <input type="text" id="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Postal Code *</label>
+                                    <input type="text" id="postalCode" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Country *</label>
+                                <select id="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;" onclick="app.nextCheckoutStep()">Continue to Payment</button>
+                    </div>
+
+                    <div id="checkoutStep2" style="display: none;">
+                        <div class="form-section">
+                            <h3>Payment Method</h3>
+                            <div class="payment-methods">
+                                <div class="payment-method selected" onclick="app.selectPayment(this)">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">💳</div>
+                                    <div>Credit Card</div>
+                                </div>
+                                <div class="payment-method" onclick="app.selectPayment(this)">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">🅿️</div>
+                                    <div>PayPal</div>
+                                </div>
+                                <div class="payment-method" onclick="app.selectPayment(this)">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">🍎</div>
+                                    <div>Apple Pay</div>
+                                </div>
+                                <div class="payment-method" onclick="app.selectPayment(this)">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">💰</div>
+                                    <div>Google Pay</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-actions">
+                            <button class="btn btn-secondary" onclick="app.prevCheckoutStep()">Back</button>
+                            <button class="btn btn-primary" style="flex: 1;" onclick="app.nextCheckoutStep()">Review Order</button>
+                        </div>
+                    </div>
+
+                    <div id="checkoutStep3" style="display: none;">
+                        <div class="form-section">
+                            <h3>Review Your Order</h3>
+                            <div id="orderReview"></div>
+                        </div>
+                        <div class="checkout-actions">
+                            <button class="btn btn-secondary" onclick="app.prevCheckoutStep()">Back</button>
+                            <button class="btn btn-accent" style="flex: 1;" onclick="app.placeOrder()">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary" id="checkoutSummary"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About View -->
+    <div id="aboutView" class="view">
+        <div class="page-header">
+            <h1>About TrendFlow Mart</h1>
+            <p>Your Gateway to Global Trends</p>
+        </div>
+        <div class="content-section">
+            <h2>Our Mission</h2>
+            <p>TrendFlow Mart curates the world's most trending products from trusted global suppliers. We specialize in automated dropshipping, bringing you the latest innovations in health, pet care, smart home technology, and eco-friendly living - all without the traditional retail markup.</p>
+            
+            <h2>How It Works</h2>
+            <p>Our fully automated dropshipping model ensures you get the best prices:</p>
+            <ul style="margin-bottom: 24px; padding-left: 24px;">
+                <li style="margin-bottom: 8px;"><strong>You Order:</strong> Browse and purchase trending products on our platform</li>
+                <li style="margin-bottom: 8px;"><strong>We Process:</strong> Your order is instantly forwarded to our verified supplier network</li>
+                <li style="margin-bottom: 8px;"><strong>Direct Shipping:</strong> Products ship directly from suppliers to your door</li>
+                <li style="margin-bottom: 8px;"><strong>No Markup:</strong> You save money because we don't hold inventory or have warehousing costs</li>
+            </ul>
+            
+            <h2>Quality Commitment</h2>
+            <p>Every product is sourced from verified suppliers with proven track records. We continuously monitor consumer reports and worldwide trends to ensure you have access to the best products on the market.</p>
+            
+            <h2>Customer Satisfaction</h2>
+            <p>With our 30-day money-back guarantee and 24/7 customer support, your satisfaction is our priority. We're here to make global shopping easy, affordable, and reliable.</p>
+        </div>
+    </div>
+
+    <!-- Contact View -->
+    <div id="contactView" class="view">
+        <div class="page-header">
+            <h1>Contact Us</h1>
+            <p>We're here to help</p>
+        </div>
+        <div class="content-section">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:contact@trendflowmart.com">contact@trendflowmart.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">⏰</span>
+                    <div>
+                        <strong>Response Time</strong><br>
+                        24-48 hours
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Send Us a Message</h3>
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" id="contactName">
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="contactEmail">
+                </div>
+                <div class="form-group">
+                    <label>Subject *</label>
+                    <input type="text" id="contactSubject">
+                </div>
+                <div class="form-group">
+                    <label>Message *</label>
+                    <textarea id="contactMessage" rows="6"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="app.sendMessage()">Send Message</button>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">How does dropshipping work?</div>
+                <div class="faq-answer">When you place an order, we forward it directly to our verified suppliers who ship the product to you. This eliminates warehousing costs and allows us to offer better prices.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What are the shipping times?</div>
+                <div class="faq-answer">Shipping times vary by product and location, typically 5-18 days. Each product page shows estimated delivery times.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer refunds?</div>
+                <div class="faq-answer">Yes! We offer a 30-day money-back guarantee on all products. If you're not satisfied, contact us for a full refund.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is there a minimum order?</div>
+                <div class="faq-answer">No minimum order required. Free shipping applies to orders over $50.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation View -->
+    <div id="confirmationView" class="view">
+        <div class="confirmation">
+            <div class="success-icon">✓</div>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for your order. Your products will be shipped directly from our suppliers.</p>
+            <div class="order-number" id="orderNumberDisplay"></div>
+            <p>You'll receive a confirmation email at the address provided with tracking information once your items ship.</p>
+            <button class="btn btn-primary" onclick="app.showView('home')">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrendFlow Mart</h3>
+                <p>Your Gateway to Global Trends</p>
+                <p style="margin-top: 16px;">📧 contact@trendflowmart.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="app.showView('about')">About Us</a></li>
+                    <li><a href="#" onclick="app.showView('contact')">Contact</a></li>
+                    <li><a href="#" onclick="app.showView('shop')">Shop All</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe for exclusive deals</p>
+                <form class="newsletter-form" onsubmit="return app.subscribe(event)">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <div class="social-icons" style="margin-top: 16px;">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">𝕏</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">📷</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrendFlow Mart. All rights reserved. Powered by automated dropshipping.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
